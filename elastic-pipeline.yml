@@ -43,7 +43,6 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: '$(registryServiceConn)'
-        command: 'push'
         repository: $(imageName)
-        tags: |
-          $(tag)
+        command: 'push'
+        tags: $(tag)
