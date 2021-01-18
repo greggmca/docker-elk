@@ -24,7 +24,6 @@ stages:
     displayName: Build
     pool:
       name: "Azure"
-      demands: docker
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
