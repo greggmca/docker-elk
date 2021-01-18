@@ -10,7 +10,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '1963dbfb-f6ff-4a87-8e0c-7e7bc7d08ff7'
+  dockerRegistryServiceConnection: '$(registryServiceConn)'
   imageRepository: 'kibana'
   containerRegistry: 'virginmoneyregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/kibana/Dockerfile'
