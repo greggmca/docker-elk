@@ -27,7 +27,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: build
-        dockerfile: $(dockerfilePath)
+        Dockerfile: $(dockerfilePath)
         tags: |
           $(tag)
         arguments: ELK_VERSION=$(elkVersion)
