@@ -29,10 +29,8 @@ stages:
       inputs:
         command: build
         Dockerfile: $(dockerfilePath)
-        repository: $(imageName)
         tags: |
           $(tag)
-        arguments: ELK_VERSION=$(elkVersion)
 - stage: Push
   displayName: Push stage
   jobs:  
