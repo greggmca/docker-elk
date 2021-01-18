@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerfilePath: '$(Build.SourcesDirectory)/elasticsearch/Dockerfile'
-  imageName: 'greggmca/elasticsearch'
+  imageName: '$(registryServiceConn):5000/greggmca/elasticsearch'
   tag: '$(Build.BuildId)'
   
 
