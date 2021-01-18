@@ -11,9 +11,9 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: "$(registryServiceConn)"
-  imageRepository: 'kibana'
+  imageRepository: 'elasticsearch'
   containerRegistry: 'virginmoneyregistry.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/kibana/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/elastocsearch/Dockerfile'
   tag: '$(Build.BuildId)'
   
 
