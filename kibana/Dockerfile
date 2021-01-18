@@ -1,4 +1,4 @@
-ARG ELK_VERSION
+ARG ELK_VERSION=7.10.2
 
 # https://www.docker.elastic.co/
 FROM docker.elastic.co/kibana/kibana:${ELK_VERSION}
