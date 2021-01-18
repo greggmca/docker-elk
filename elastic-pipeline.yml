@@ -11,6 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerfilePath: '$(Build.SourcesDirectory)/elasticsearch/Dockerfile'
+  imageName: 'elasticsearch'
   tag: '$(Build.BuildId)'
   
 
@@ -28,6 +29,7 @@ stages:
       inputs:
         command: build
         Dockerfile: $(dockerfilePath)
+        repository: $(imageName)
         tags: |
           $(tag)
         arguments: ELK_VERSION=$(elkVersion)
@@ -43,3 +45,6 @@ stages:
       inputs:
         containerRegistry: '$(registryServiceConn)'
         command: 'push'
+        repository: $(imageName)
+        tags: |
+          $(tag)
