@@ -29,6 +29,7 @@ stages:
       inputs:
         command: build
         Dockerfile: $(dockerfilePath)
+        repository: $(imageName)
         tags: |
           $(tag)
 - stage: Push
