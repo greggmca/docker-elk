@@ -12,7 +12,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: "$(registryServiceConn)"
   containerRegistry: 'virginmoneyregistry.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/elastocsearch/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/elasticsearch/Dockerfile'
   tag: '$(Build.BuildId)'
   
 
