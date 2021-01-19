@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   elasticsearch:
-    image: "virginmoneyregistry/greggmca/elasticsearch:${elastic_version}"
+    image: "virginmoneyregistry.azurecr.io/greggmca/elasticsearch:${elastic_version}"
     volumes:
       - type: bind
         source: ./elasticsearch/config/elasticsearch.yml
@@ -24,7 +24,7 @@ services:
       - elk
 
   logstash:
-    image: "virginmoneyregistry/greggmca/logstash:${logstash_version}"
+    image: "virginmoneyregistry.azurecr.io/greggmca/logstash:${logstash_version}"
     volumes:
       - type: bind
         source: ./logstash/config/logstash.yml
@@ -47,7 +47,7 @@ services:
       - elasticsearch
 
   kibana:
-    image: "virginmoneyregistry/greggmca/kibana:${kibana_version}"
+    image: "virginmoneyregistry.azurecr.io/greggmca/kibana:${kibana_version}"
     volumes:
       - type: bind
         source: ./kibana/config/kibana.yml
