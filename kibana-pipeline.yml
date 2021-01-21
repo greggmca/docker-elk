@@ -16,11 +16,11 @@ variables:
   
 
 stages:
-- stage: Build
-  displayName: Build stage
+- stage: "BuildAndPush"
+  displayName: "Build and push $(imageName):$(tag) to Private Registry"
   jobs:  
-  - job: Build
-    displayName: Build
+  - job: "BuildAndPush"
+    displayName: "build and push"
     pool:
       name: "agents-azure"
     steps:
