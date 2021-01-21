@@ -22,7 +22,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: "Azure"
+      name: "agents-azure"
     steps:
     - task: Docker@2
       inputs:

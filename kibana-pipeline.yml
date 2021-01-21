@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+- kibana
 
 resources:
 - repo: self
@@ -22,7 +22,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: "Azure"
+      name: "agents-azure"
     steps:
     - task: Docker@2
       inputs:
