@@ -20,7 +20,7 @@ stages:
   displayName: "Build and push $(imageName):$(tag) to Private Registry"
   jobs:  
   - job: "BuildAndPush"
-    displayName: "build and push"
+    displayName: "Build and Push for Anthony and Diego"
     pool:
       name: "agents-azure"
     steps:
